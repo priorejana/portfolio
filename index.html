@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Priscila Orejana</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="menu-nav">
+        <div class="logo">Priscila Orejana</div>
+        <div class="menu">
+            <div class="icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#sobre-mim" onclick="toggleMenu()">Sobre Mim</a></li>
+                <li><a href="#experiencia" onclick="toggleMenu()">Experiência</a></li>
+                <li><a href="#projetos" onclick="toggleMenu()">Projetos</a></li>
+                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic">
+            <img src="./arquivos/foto-de-perfil.png" alt="Foto de Perfil">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Olá, meu nome é</p>
+            <h1 class="title">Priscila Orejana</h1>
+            <p class="section__text__p2">Estudante de Engenharia de Computação</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('arquivos/curriculo.pdf')">Currículo</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contato'">Contato</button>
+            </div>
+            <div id="socials-container">
+                <img src="/arquivos/linkedin (2).png" alt="Meu perfil no Linkedin" class="socials-icon" onclick="location.href='//linkedin.com/in/priscilaorejana'">
+                <img src="/arquivos/github (2).png" alt="Meu perfil no GitHub" class="socials-icon" onclick="location.href='//github.com/priorejana'">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
