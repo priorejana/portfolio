@@ -1,14 +1,28 @@
 /* Geral */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/*@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@100,200,300,400,500,700,800,900,1&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap'); */
 
 * {
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --primary-color:#FB6F92;
+    --secondary-color: #FF8FAB;
+    --tertiary-color: #FFB3C6;
+    --quaternary-color: #fddae3;
+    --background-color: #ffeef2;
+    --dark-color: #520016;
+}
+
 body {
-    font-family: "Poppins", sans-serif;
+    /*font-family: 'Cabinet Grotesk', sans-serif;*/
+    font-family: "Azeret Mono", monospace;
+    /* font-family: 'Satoshi', sans-serif; */
+    background-color: var(--background-color);
 }
 
 html {
@@ -16,7 +30,15 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: var(--dark-color);
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
 }
 
 /* Transição */
@@ -44,20 +66,21 @@ nav {
 }
 
 a {
-    color: black;
+    color: var(--dark-color);
     text-decoration: none;
     text-decoration-color: white;
 }
 
 a:hover {
-    color: gray;
+    color: var(--primary-color);
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-    text-decoration-color: rgba(128, 128, 128, 0.397); 
+    text-decoration-color: var(--primary-color); 
 }
 
 .logo {
     font-size: 2rem;
+    color: var(--primary-color);
 }
 
 .logo:hover {
@@ -87,7 +110,7 @@ a:hover {
 .icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--dark-color);
     transition: all 300ms ease;
 }
 
@@ -95,7 +118,7 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: var(--background-color);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -107,15 +130,15 @@ a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: black;
+    color: var(--dark-color);
     text-decoration: none;
 }
 
 .menu-links a:hover {
-    color: gray;
+    color: var(--primary-color);
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-    text-decoration-color: rgba(128, 128, 128, 0.397); 
+    text-decoration-color: var(--primary-color); 
 }
 
 .menu-links li {
@@ -239,45 +262,23 @@ section {
 
 .btn {
     font-weight: 600;
+    font-family: "Azeret Mono", monospace;
     transition: all 300ms ease;
     padding: 1rem;
-    width: 8rem;
+    width: 7rem;
     border-radius: 2rem;
 }
 
-.btn-color-1, .btn-color-2 {
-    border: rgba(53, 53, 53, 0.356) 0.1rem solid;
-}
-
-.btn-color-1:hover, .btn-color-2:hover {
+.btn:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background: rgb(53,53,53);
+    background: var(--primary-color);
     color: white;
 }
 
 .btn-color-1, .btn-color-2 {
-    background: rgb(255, 255, 255);
-    color: rgba(53, 53, 53, 0.877);
-}
-
-/*.btn-color-1, .btn-color-2:hover {
-    background: rgb(53,53,53);
+    /* border: var(--secondary-color) 0.1rem solid; */
+    border: none;
+    background: var(--tertiary-color);
     color: white;
-}
-
-.btn-color-1:hover {
-    background: rgb(0,0,0);
-}
-
-.btn-color-2 {
-    background: none;
-}
-
-.btn-color-2:hover {
-    border: rgb(255,255,255) 0.1rem solid;
-}*/
-
-.btn-container {
-    gap: 1rem;
 }
