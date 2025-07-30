@@ -5,15 +5,17 @@
 * {
     margin: 0;
     padding: 0;
+    transition: background-color 300ms ease, color 300ms ease;
 }
 
 :root {
     --primary-color:#FB6F92;
     --secondary-color: #FF8FAB;
     --tertiary-color: #FFB3C6;
-    --quaternary-color: #fddae3;
+    --quaternary-color: #ffcfdb;
     --background-color: #ffeef2;
     --dark-color: #801431;
+    --header-color: rgb(255, 227, 233);
     --white: #ffffff;
 }
 
@@ -24,6 +26,7 @@
     --quaternary-color: #661329;
     --background-color: #3f0a18;
     --dark-color: #ffeef2;
+    --header-color: #5e10248f;
     --white: #661329;
 }
 
@@ -85,6 +88,16 @@ h1 {
 
 h2, h3, h4, h5, h6 {
     color: var(--dark-color);
+}
+
+header {
+    background-color: var(--header-color);
+    width: 100%;
+    /* position: fixed;
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    z-index: 1000; */
 }
 
 /* Transição */
@@ -261,7 +274,7 @@ section {
     height: 80vh;
 }
 
-.section__pic {
+/* .section__pic {
     display: flex;
     height: 400px;
     width: 400px;
@@ -270,7 +283,11 @@ section {
 
 .section__pic img {
     border-radius: 50%;
-}
+} */
+
+/* section#contato , section#experiencia, section#sobre-mim, section#projetos {
+    scroll-margin-top: 120px;
+} */
 
 .section__text {
     align-self: center;
@@ -295,26 +312,39 @@ section {
     text-align: center;
 }
 
+/* Ícones */
+
 #socials-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 1rem;
     gap: 1rem;
 }
 
-/* Ícones */
+#socials-container a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .socials-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2rem;
+    fill: var(--dark-color);
+    width: 100%;
+    height: 100%;
     cursor: pointer;
+    transition: all 300ms ease;
 }
 
 .socials-icon:hover {
     transform: scale(1.2);
-    transition: all 300ms ease;
+}
+
+#github {
+  position: relative;
+  bottom: 0.5px;
 }
 
 /* Botões */
